@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Détails : Longueur et Complexité</title>
+    <link rel="stylesheet" href="style.css"> <style> /* Balise permettant d'ajouter du style CSS spécifique uniquement à cette page de détails */
+        .page-detail { text-align: left; padding: 20px; } /* Aligne le long texte pédagogique à gauche pour la lecture */
+        .page-detail h2 { color: #1e3c72; margin-bottom: 15px; } /* Donne la couleur bleue au titre de l'article */
+        .page-detail p { color: #334155; line-height: 1.6; font-size: 14px; margin-bottom: 15px; } /* Rend le texte aéré et lisible */
+        .btn-retour { display: inline-block; padding: 10px 20px; background-color: #1e3c72; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 20px; } /* Transforme le lien en un joli bouton bleu */
+        .btn-retour:hover { background-color: #2a5298; } /* Change la couleur du bouton au survol de la souris */
+        .badge-cyber { background: #e0f2fe; color: #0369a1; padding: 4px 8px; border-radius: 6px; font-size: 12px; font-weight: bold; } /* Crée un petit badge de catégorie "Cyber" en haut */
+    </style>
+</head>
+<body>
+    <div class="container page-detail"> <span class="badge-cyber">Règle N°1 : Force informatique</span>
+        <h2>Longueur & Complexité des Mots de Passe</h2>
+        
+        <p><strong>Pourquoi est-ce vital ?</strong><br> Les pirates informatiques utilisent aujourd'hui des logiciels d'attaque par "force brute" capables de tester des milliards de combinaisons par seconde. Un mot de passe court (comme 6 ou 8 caractères), même s'il contient un caractère spécial, peut être trouvé en quelques minutes.</p>
+
+        <p><strong>L'impact mathématique de la longueur :</strong><br>
+        Chaque caractère que vous ajoutez multiplie de manière exponentielle le temps nécessaire pour casser votre code. À partir de 12 caractères bien diversifiés, le temps requis pour le pirater passe de quelques jours à... plusieurs millions d'années ! C'est la meilleure barrière de sécurité actuelle.</p>
+
+        <p><strong>Comment construire un mot de passe complexe et robuste ?</strong><br>
+        Il doit obligatoirement mélanger quatre familles de caractères distinctes :<br>
+        • Des lettres **Majuscules** (A-Z)<br>
+        • Des lettres **Minuscules** (a-z)<br>
+        • Des **Chiffres** (0-9)<br>
+        • Des **Symboles/Caractères spéciaux** (@, #, $, %, &, !, ?)</p>
+
+        <p><em>Astuce de pro :</em> Au lieu d'un mot difficile à retenir, utilisez une "phrase de passe". Par exemple, prenez une phrase comme "J'aime le sport sur mon Chromebook !" et utilisez les premières lettres et chiffres pour créer un code secret ultra-fort.</p>
+
+        <a href="index.html" class="btn-retour">← Retour au Générateur</a>
+    </div>
+</body>
+</html>
