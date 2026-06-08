@@ -1,0 +1,180 @@
+/* --- STYLE GLOBAL DE LA PAGE --- */
+body {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); /* Applique un fond dégradé moderne allant du bleu foncé au bleu roi */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Configure une police d'écriture propre, moderne et sans empattements */
+    display: flex; /* Active le mode de mise en page Flexbox */
+    justify-content: center; /* Centre le contenu horizontalement sur l'écran */
+    align-items: center; /* Centre le contenu verticalement sur l'écran */
+    min-height: 100vh; /* Force la page à occuper au minimum 100% de la hauteur de l'écran du Chromebook */
+    margin: 0; /* Enlève les marges par défaut du navigateur tout autour de la page */
+    padding: 20px; /* Ajoute un espace interne de sécurité pour que le contenu ne colle pas aux bords */
+    box-sizing: border-box; /* Force le calcul des tailles à inclure les bordures et les paddings pour éviter les bugs d'affichage */
+}
+
+/* --- LE CONTENEUR BLANC CENTRAL --- */
+.container {
+    background-color: white; /* Donne une couleur de fond blanche à la boîte centrale */
+    padding: 40px; /* Espace interne de 40px tout autour du texte à l'intérieur de la boîte */
+    border-radius: 20px; /* Arrondit généreusement les quatre angles de la boîte */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2); /* Crée une ombre douce et réaliste sous la boîte pour donner un effet de relief */
+    text-align: center; /* Force l'alignement de tous les textes enfants au centre par défaut */
+    max-width: 650px; /* Limite la largeur maximale de la boîte pour qu'elle reste élégante sur grand écran */
+    width: 100%; /* Permet à la boîte de s'étirer sur toute la largeur disponible sur les écrans plus petits */
+}
+
+.logo-emoji {
+    font-size: 50px; /* Grossit l'émoji cadenas pour qu'il agisse comme un grand logo de 50 pixels */
+    margin-bottom: 10px; /* Repousse le titre du projet vers le bas de 10 pixels */
+}
+
+h1 {
+    color: #1e3c72; /* Coloration en bleu foncé du titre principal */
+    margin: 0 0 5px 0; /* Enlève les marges du haut/côtés et applique 5px vers le bas */
+    font-size: 28px; /* Taille fixe imposante de 28 pixels */
+}
+
+h2 {
+    color: #555; /* Couleur gris foncé pour contraster discrètement avec le titre principal */
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    font-weight: 400; /* Allège l'épaisseur du texte pour un effet élégant et fin */
+}
+
+p {
+    color: #777; /* Teinte gris clair pour les paragraphes informatifs secondaires */
+    font-size: 14px;
+}
+
+/* --- AFFICHAGE DU MOT DE PASSE GÉNÉRÉ --- */
+#motdepasse {
+    font-family: 'Courier New', Courier, monospace; /* Police de type "code" où chaque lettre fait exactement la même largeur */
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f4f6f9; /* Fond de boîte gris très clair pour faire ressortir le texte */
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 25px;
+    border: 2px dashed #1e3c72; /* Crée une bordure bleue en pointillés de 2 pixels */
+    min-height: 30px; /* Évite que la boîte ne s'écrase sur elle-même quand aucun mot de passe n'est encore généré */
+    word-break: break-all; /* Force la coupure à la ligne si le mot de passe généré est extrêmement long */
+}
+
+/* --- DESIGN DES BOUTONS DE L'APPLICATION --- */
+button {
+    background-color: #1e3c72; /* Fond bleu foncé par défaut */
+    color: white; /* Texte écrit en blanc */
+    border: none; /* Supprime la bordure grise moche appliquée par défaut par les navigateurs */
+    padding: 12px 20px; /* Structure la taille du bouton : 12px en haut/bas et 20px à gauche/droite */
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px; /* Angles légèrement arrondis de 8 pixels */
+    cursor: pointer; /* Transforme le pointeur de la souris en petite main cliquable au survol */
+    margin: 8px; /* Espacement externe tout autour de chaque bouton pour éviter qu'ils se collent */
+    transition: background 0.3s ease; /* Fluidifie le changement de couleur au survol sur une durée de 0.3 seconde */
+}
+
+button:hover {
+    background-color: #2a5298; /* Éclaircit légèrement le bleu du bouton lorsque la souris passe dessus */
+}
+
+/* --- SÉLECTEUR DE LA CASE NUMÉRIQUE --- */
+input[type="number"] {
+    padding: 10px;
+    width: 60px; /* Largeur étroite calibrée parfaitement pour insérer deux ou trois chiffres */
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center; /* Centre le chiffre (ex: 10) au milieu exact de la case blanche */
+}
+
+/* --- STYLE DU SÉPARATEUR DE SECTION --- */
+.separateur {
+    border: none;
+    height: 1px; /* Épaisseur ultra-fine d'un seul pixel */
+    background: linear-gradient(to right, transparent, #ddd, transparent); /* Effet fondu très chic : invisible sur les bords, gris clair au milieu */
+    margin: 30px 0; /* Crée un grand espace vide de 30px au-dessus et en dessous de la ligne */
+}
+
+.titre-section {
+    color: #1e3c72;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* --- GRILLE CONTENANT LES CARTES --- */
+.regles-container {
+    display: flex; /* Aligne instantanément les enfants sur une seule ligne horizontale */
+    gap: 15px; /* Crée un espace fixe vide de 15px entre chaque carte pour l'aération */
+    justify-content: space-between; /* Distribue uniformément l'espace disponible entre les éléments */
+    margin-top: 10px;
+    text-align: left; /* Force les textes internes des cartes à s'écrire normalement de gauche à droite */
+}
+
+/* --- LIENS AUTOUR DES CARTES --- */
+.regle-card-link {
+    text-decoration: none; /* Désactive le soulignement bleu appliqué d'office par le navigateur sur les liens hypertextes */
+    color: inherit; /* Force le lien à utiliser la couleur de texte normale définie en interne */
+    flex: 1; /* Force chaque carte à occuper exactement la même largeur, équitablement */
+    display: block; /* Transforme la balise <a> en conteneur de type bloc pour englober la structure */
+}
+
+/* --- STRUCTURE D'UNE CARTE --- */
+.regle-card {
+    background: #f8fafc; /* Fond blanc cassé très moderne */
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0; /* fine bordure de délimitation gris clair */
+    height: 100%; /* Force toutes les cartes à s'aligner sur la même hauteur maximale */
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* Permet d'animer l'élévation et l'ombre en douceur */
+}
+
+/* --- ANIMATION AU SURVOL DE LA CARTE --- */
+.regle-card:hover {
+    transform: translateY(-5px); /* Décale la carte de 5 pixels vers le haut, donnant l'impression qu'elle flotte */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Accentue l'ombre sous la carte surélevée */
+    border-color: #1e3c72; /* Modifie la couleur de la bordure en bleu foncé au survol */
+}
+
+.regle-icone {
+    font-size: 24px;
+    display: block; /* Force l'émoji à se comporter comme un bloc pour repousser le titre en dessous */
+    margin-bottom: 8px;
+}
+
+.regle-card h4 {
+    margin: 0 0 8px 0;
+    color: #334155;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.regle-card p {
+    margin: 0;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.5; /* Rend les paragraphes descriptifs compacts mais aérés à lire */
+}
+
+.EnSavoirPlus {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 11px;
+    color: #1e3c72;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+/* Cible l'élément .EnSavoirPlus uniquement lorsque son parent .regle-card est survolé */
+.regle-card:hover .EnSavoirPlus {
+    color: #27ae60; /* Change la couleur du petit lien interne en vert de succès lors du survol */
+}
+
+/* --- RESPONSIVE DESIGN (POUR LES SMARTPHONES) --- */
+@media (max-width: 600px) { /* S'active automatiquement si l'écran mesure moins de 600 pixels de large */
+    .regles-container {
+        flex-direction: column; /* Bascule l'alignement horizontal Flexbox en colonne verticale (les cartes s'empilent) */
+    }
+}

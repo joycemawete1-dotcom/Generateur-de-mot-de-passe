@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Générateur de mot de passe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo-emoji">🔒</div>
+        <h1>Projet Tutoré</h1>
+        <h2>Génération de mot de passe Sécurisé</h2>
+        <p>Bienvenue dans mon projet Tutoré</p>
+
+        <input type="number" id="longueur" value="10" min="4" max="30">
+        <button onclick="genererMotDePasse()">Générer un mot de passe</button>
+        <button onclick="copierMotDePasse()">Copier</button>
+        
+        <p id="motdepasse"></p>
+
+        <hr class="separateur">
+        
+        <h3 class="titre-section">Guide de Sécurité : Les Bonnes Pratiques</h3>
+        
+        <div class="regles-container">
+            <a href="longueur.html" class="regle-card-link">
+                <div class="regle-card">
+                    <span class="regle-icone">🔒</span>
+                    <h4>Longueur & Complexité</h4>
+                    <p>Un bon mot de passe doit contenir au moins 12 caractères combinant majuscules, minuscules, chiffres et symboles.</p>
+                    <span class="EnSavoirPlus">Lire la suite →</span>
+                </div>
+            </a>
+
+            <a href="evidence.html" class="regle-card-link">
+                <div class="regle-card">
+                    <span class="regle-icone">❌</span>
+                    <h4>Évitez l'évidence</h4>
+                    <p>Ne jamais utiliser de données personnelles (nom, date de naissance) ou de suites logiques comme "123456" ou "azerty".</p>
+                    <span class="EnSavoirPlus">Lire la suite →</span>
+                </div>
+            </a>
+
+            <a href="unicite.html" class="regle-card-link">
+                <div class="regle-card">
+                    <span class="regle-icone">🔄</span>
+                    <h4>Unicité stricte</h4>
+                    <p>Utilisez un mot de passe unique pour chaque compte. Si un site est piraté, vos autres accès restent protégés.</p>
+                    <span class="EnSavoirPlus">Lire la suite →</span>
+                </div>
+            </a>
+        </div>
+
+    </div> <script src="script.js"></script>
+</body>
+</html>
