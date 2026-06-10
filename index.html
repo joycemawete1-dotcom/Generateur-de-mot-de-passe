@@ -5,7 +5,16 @@
         <button onclick="copierMotDePasse()">Copier</button>
         
         <p id="motdepasse"></p>
-
+        <p id="force-indicateur"></p>
+        <div id="barre-force-conteneur" style="width: 100%; background-color: #e0e0e0; height: 10px; border-radius: 5px; margin-top: 5px; overflow: hidden;">
+       <div id="barre-force" style="width: 0%; height: 100%; transition: width 0.3s ease, background-color: 0.3s ease;"></div>
+   </div>
+<div id="zone-historique" style="margin-top: 20px; text-align: left;">
+    <h3>Historique des derniers mots de passe :</h3>
+    <ul id="liste-historique" style="background: #f4f4f4; padding: 10px; border-radius: 5px; list-style-type: none;">
+        <li>Aucun mot de passe généré pour l'instant</li>
+    </ul>
+</div>
         <hr class="separateur"> <h3 class="titre-section">Guide de Sécurité : Les Bonnes Pratiques</h3> <div class="regles-container"> 
             
             <a href="longueur.html" class="regle-card-link"> <div class="regle-card">
